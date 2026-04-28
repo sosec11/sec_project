@@ -1,41 +1,23 @@
-# CyberSec Toolkit (Work in Progress)
+# Log Alert Analyzer
 
 ## Description
+This project is a simple Python-based log analyzer designed to detect suspicious activity from web server logs.
 
-Ce projet est un environnement de développement personnel en Python, dédié à l’apprentissage et à l’expérimentation autour de la cybersécurité.
+It parses log files, identifies abnormal behaviors (such as repeated failed requests or suspicious paths), and generates a structured report.
 
-L’objectif est de construire progressivement un ensemble d’outils simples permettant de mieux comprendre certains mécanismes fondamentaux (authentification, réseau, analyse, etc.).
+## Features
+- Parse log files
+- Detect suspicious IP addresses
+- Identify common attack patterns (/admin, /wp-login, etc.)
+- Generate a report
 
-> ⚠️ Projet en cours de développement – structure et fonctionnalités évolutives
+## Technologies
+- Python
+- File parsing
+- Basic security analysis
 
----
+## Usage
+Coming soon...
 
-## Objectifs
-
-- Renforcer mes compétences en Python
-- Approfondir ma compréhension des bases en cybersécurité
-- Mettre en pratique des concepts techniques de manière concrète
-- Construire un projet évolutif et documenté
-
----
-
-## Fonctionnalités (en cours)
-
-Les fonctionnalités seront ajoutées progressivement, par exemple :
-
-- Vérification de robustesse de mots de passe
-- Simulation d’authentification
-- Manipulation de données et analyse simple
-- Exploration de concepts réseau (ex: ports)
-
----
-
-## Structure du projet
-
-```plaintext
-project/
-│
-├── modules/
-├── scripts/
-├── tests/
-└── README.md
+## Author
+Sonia Ouallouche
