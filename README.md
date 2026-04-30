@@ -1,20 +1,24 @@
-# Log Alert Analyzer
+# Security Toolkit
 
 ## Description
-This project is a simple Python-based log analyzer designed to detect suspicious activity from web server logs.
+This project is a Python-based cybersecurity toolkit designed to provide multiple analysis tools.
 
-It parses log files, identifies abnormal behaviors (such as repeated failed requests or suspicious paths), and generates a structured report.
+It includes modules for log analysis, OSINT, and basic security investigation.
 
 ## Features
-- Parse log files
-- Detect suspicious IP addresses
-- Identify common attack patterns (/admin, /wp-login, etc.)
-- Generate a report
+- Log Analyzer (detection of suspicious activity)
+- OSINT tools (coming soon)
+- Modular architecture
 
 ## Technologies
 - Python
 - File parsing
 - Basic security analysis
+
+## Project Structure
+- modules/log_analyzer : log analysis
+- modules/osint : OSINT tools
+- data : sample files
 
 ## Usage
 Coming soon...
