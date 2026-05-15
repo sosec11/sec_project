@@ -1,9 +1,10 @@
+from .patterns import SUSPICIOUS_KEYWORDS
+
 def detect_suspicious_lines(logs):
-    suspicious_keywords = ["failed", "error", "unauthorized"]
     suspicious_count = 0
 
     for line in logs:
-        for keyword in suspicious_keywords:
+        for keyword in SUSPICIOUS_KEYWORDS:
             if keyword.lower() in line.lower():
                 suspicious_count += 1
                 print("[!] Suspicious activity found:")
