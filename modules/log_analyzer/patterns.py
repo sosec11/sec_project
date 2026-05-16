@@ -1,8 +1,8 @@
-SUSPICIOUS_KEYWORDS = [
-    "failed",
-    "error",
-    "unauthorized",
-    "denied",
-    "invalid",
-    "critical"
-]
+SUSPICIOUS_KEYWORDS = {
+    "failed": "medium",
+    "error": "low",
+    "unauthorized": "high",
+    "denied": "medium",
+    "invalid": "low",
+    "critical": "high"
+}
