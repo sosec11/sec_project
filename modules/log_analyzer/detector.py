@@ -8,7 +8,7 @@ def detect_suspicious_lines(logs):
             if keyword.lower() in line.lower():
                 suspicious_count += 1
                 print("[!] Suspicious activity found:")
-                print("SEVERITY: {severity}")
+                print("SEVERITY: {severity}git ")
                 print(line)
                 break
 
