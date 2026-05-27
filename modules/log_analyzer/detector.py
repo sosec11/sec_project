@@ -1,4 +1,5 @@
 from .patterns import SUSPICIOUS_KEYWORDS
+from utils.display import print
 
 def detect_suspicious_lines(logs):
     suspicious_count = 0
