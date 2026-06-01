@@ -1,6 +1,6 @@
 from .patterns import SUSPICIOUS_KEYWORDS
 from utils.display import print_warning
-from data import datetime
+from datetime import datetime
 
 def detect_suspicious_lines(logs):
     suspicious_count = 0
