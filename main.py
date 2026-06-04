@@ -22,9 +22,10 @@ elif choice == "2":
 
     password = input("Enter a password: ")
 
-    score, feedback = check_password_strength(password)
+    score, strength, feedback = check_password_strength(password)
 
     print(f"\nPassword score: {score}/6")
+    print(f"Strength: {strength}")
 
     if feedback:
         print("\nRecommendations:")
