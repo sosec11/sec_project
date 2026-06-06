@@ -1,6 +1,7 @@
 from modules.log_analyzer.parser import read_logs
 from modules.log_analyzer.detector import detect_suspicious_lines
 from modules.password_checker.password_checker import check_password_strength
+from modules.hash_generator.hash_generator import generate_hashes
 from utils.display import print_banner, print_menu
 
 print_banner()
