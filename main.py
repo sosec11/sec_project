@@ -33,6 +33,14 @@ elif choice == "2":
 
         for advice in feedback:
             print("-", advice)
+        
+elif choice == "3":
+    text = input("Enter text to hash: ")
+        
+    md5hash, sha256_hash = generate_hashes(text)
+
+    print(f"\nMD5:{md5hash}")
+    print(f"SHA256: {sha256_hash}")
 
 else:
     print("Invalid option.")
