@@ -2,6 +2,7 @@ from modules.log_analyzer.parser import read_logs
 from modules.log_analyzer.detector import detect_suspicious_lines
 from modules.password_checker.password_checker import check_password_strength
 from modules.hash_generator.hash_generator import generate_hashes
+from modules.ioc_extractor.ioc_extractor import extract_iocs
 from utils.display import print_banner, print_menu
 
 print_banner()
@@ -41,6 +42,26 @@ elif choice == "3":
 
     print(f"\nMD5:{md5hash}")
     print(f"SHA256: {sha256_hash}")
+
+elif choice == "4":
+
+    text = input("Enter text to analyze: ")
+
+    ips, emails, urls = extract_iocs(text)
+
+    print("\nIOCs found:")
+
+    print("\nIP addresses:")
+    for ip in ips:
+        print("-", ip)
+
+    print("\nEmails:")
+    for email in emails:
+        print("-", email)
+
+    print("\nURLs:")
+    for url in urls:
+        print("-", url)
 
 else:
     print("Invalid option.")

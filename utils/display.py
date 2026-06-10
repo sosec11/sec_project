@@ -7,6 +7,7 @@ def print_menu():
     print("1. Log Analyzer")
     print("2. Password Checker")
     print("3. Hash Generator")
+    print("4. IOC Extractor")
 
 def print_warning(message):
 
