@@ -49,6 +49,11 @@ elif choice == "4":
 
     ips, emails, urls = extract_iocs(text)
 
+    if not ips and not emails and not urls:
+
+        print("\nNo IOCs found.")
+else:
+
     print("\nIOCs found:")
 
     print("\nIP addresses:")
