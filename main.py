@@ -68,5 +68,5 @@ else:
     for url in urls:
         print("-", url)
 
-else:
-    print("Invalid option.")
+    else:
+        print("Invalid option.")
