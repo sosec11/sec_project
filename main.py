@@ -3,6 +3,7 @@ from modules.log_analyzer.detector import detect_suspicious_lines
 from modules.password_checker.password_checker import check_password_strength
 from modules.hash_generator.hash_generator import generate_hashes
 from modules.ioc_extractor.ioc_extractor import extract_iocs
+from modules.ioc_extractor.file_analyzer import analyze_file
 from utils.display import print_banner, print_menu
 
 print_banner()
@@ -52,21 +53,47 @@ elif choice == "4":
     if not ips and not emails and not urls:
 
         print("\nNo IOCs found.")
-else:
-
-    print("\nIOCs found:")
-
-    print("\nIP addresses:")
-    for ip in ips:
-        print("-", ip)
-
-    print("\nEmails:")
-    for email in emails:
-        print("-", email)
-
-    print("\nURLs:")
-    for url in urls:
-        print("-", url)
 
     else:
-        print("Invalid option.")
+
+        print("\nIOCs found:")
+
+        print("\nIP addresses:")
+        for ip in ips:
+            print("-", ip)
+
+        print("\nEmails:")
+        for email in emails:
+            print("-", email)
+
+        print("\nURLs:")
+        for url in urls:
+            print("-", url)
+
+elif choice == "5":
+
+    path = input("Enter IOC file path: ")
+
+    ips, emails, urls = analyze_file(path)
+
+    if not ips and not emails and not urls:
+        print("\nNo IOCs found.")
+
+    else:
+
+        print("\nIOCs found:")
+
+        print("\nIP addresses:")
+        for ip in ips:
+            print("-", ip)
+
+        print("\nEmails:")
+        for email in emails:
+            print("-", email)
+
+        print("\nURLs:")
+        for url in urls:
+            print("-", url)
+
+else:
+            print("Invalid option.")
