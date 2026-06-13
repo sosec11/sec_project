@@ -4,7 +4,7 @@ from modules.password_checker.password_checker import check_password_strength
 from modules.hash_generator.hash_generator import generate_hashes
 from modules.ioc_extractor.ioc_extractor import extract_iocs
 from modules.ioc_extractor.file_analyzer import analyze_file
-from utils.display import print_banner, print_menu
+from utils.display import print_banner, print_menu, print_iocs
 
 print_banner()
 print_menu()
@@ -50,25 +50,7 @@ elif choice == "4":
 
     ips, emails, urls = extract_iocs(text)
 
-    if not ips and not emails and not urls:
-
-        print("\nNo IOCs found.")
-
-    else:
-
-        print("\nIOCs found:")
-
-        print("\nIP addresses:")
-        for ip in ips:
-            print("-", ip)
-
-        print("\nEmails:")
-        for email in emails:
-            print("-", email)
-
-        print("\nURLs:")
-        for url in urls:
-            print("-", url)
+    print_iocs(ips, emails, urls)
 
 elif choice == "5":
 
@@ -76,24 +58,7 @@ elif choice == "5":
 
     ips, emails, urls = analyze_file(path)
 
-    if not ips and not emails and not urls:
-        print("\nNo IOCs found.")
-
-    else:
-
-        print("\nIOCs found:")
-
-        print("\nIP addresses:")
-        for ip in ips:
-            print("-", ip)
-
-        print("\nEmails:")
-        for email in emails:
-            print("-", email)
-
-        print("\nURLs:")
-        for url in urls:
-            print("-", url)
+    print_iocs(ips, emails, urls)
 
 else:
-            print("Invalid option.")
+    print("Invalid option.")
